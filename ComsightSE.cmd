@@ -319,7 +319,12 @@ rem )
 
   set threat=""
 
-  if "%filemd5%" == "73c3466b6779344652ef97209ab4db1a" set threat="Win32.BadJoke.Anywork.A
+  if "%filemd5%" == "44d88612fea8a8f36de82e1278abb02f" set threat="EicarTestFile"
+  if "%filemd5%" == "07b73a29b36215d3aa5a3ff353e69c90" set threat="Win32.BadJoke.Agent.A"
+  if "%filemd5%" == "9939f0f4547a1a7f8c42903ae490ba49" set threat="Win32.BadJoke.Agent.B"
+  if "%filemd5%" == "844db7862d6294ac569906e85e087e95" set threat="Win32.BadJoke.Agent.C"
+  if "%filemd5%" == "73c3466b6779344652ef97209ab4db1a" set threat="Win32.BadJoke.Anywork.A"
+  if "%filemd5%" == "428b5352d8a6bb681ce65e172fe16c29" set threat="Win32.BadJoke.Jepruss.A"
 
   if "%threat%" == """" goto md5_safe
 
@@ -414,6 +419,8 @@ rem )
   echo MD5 Scan: Successful
   echo Behavior Scan: Pending
 
+  find /i /c "EICAR-STANDARD-ANTIVIRUS-TEST-FILE" %file% > NUL
+  if %errorlevel% == 0 set threat=EicarTestFile
   find /i /c "git clone http" %file% > NUL
   if %errorlevel% == 0 set threat=Exploit.CVE-2017-9800
   find /i /c "git clone ssh" %file% > NUL
@@ -462,8 +469,8 @@ rem )
   if %errorlevel% == 0 set threat=MaliciousWebsite
   find /i /c "davilta.tk" %file% > NUL
   if %errorlevel% == 0 set threat=MaliciousWebsite
-  find /i /c "EICAR-STANDARD-ANTIVIRUS-TEST-FILE" %file% > NUL
-  if %errorlevel% == 0 set threat=NotAVirus.EICARTestFile.A
+  find /i /c "This program was created as a fun little trick.  It is not meant to hurt anyone." %file% > NUL
+  if %errorlevel% == 0 set threat=Win32.BadJoke.Agent.C!gen
 
   if "%threat%" == """" (
     if "%dirscan%" == "true" (
