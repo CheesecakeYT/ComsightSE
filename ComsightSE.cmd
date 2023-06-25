@@ -320,11 +320,18 @@ rem )
   set threat=""
 
   if "%filemd5%" == "44d88612fea8a8f36de82e1278abb02f" set threat="EicarTestFile"
+  if "%filemd5%" == "8f20a7f89173fe76c4de0c7e23a5bf67" set threat="Win32.Adware.CloverPlus.A"
+  if "%filemd5%" == "dd17f2d1bd0748ec84fb6ccd088ef829" set threat="Win32.Adware.CloverPlus.B"
+  if "%filemd5%" == "1c9bd7526e179792bc3bce0785a6c58d" set threat="Win32.Adware.Elex.A"
+  if "%filemd5%" == "de3ea65a9f1064abdd9b612fd4b19aa1" set threat="Win32.Adware.PCPlus.A"
   if "%filemd5%" == "07b73a29b36215d3aa5a3ff353e69c90" set threat="Win32.BadJoke.Agent.A"
   if "%filemd5%" == "9939f0f4547a1a7f8c42903ae490ba49" set threat="Win32.BadJoke.Agent.B"
   if "%filemd5%" == "844db7862d6294ac569906e85e087e95" set threat="Win32.BadJoke.Agent.C"
   if "%filemd5%" == "73c3466b6779344652ef97209ab4db1a" set threat="Win32.BadJoke.Anywork.A"
   if "%filemd5%" == "428b5352d8a6bb681ce65e172fe16c29" set threat="Win32.BadJoke.Jepruss.A"
+  if "%filemd5%" == "5c99411fa8a11691771a476ff52a9344" set threat="Win32.Miner.Herxmin.A"
+  if "%filemd5%" == "b5bde51e8f5c854b2c0ff7e13eb57859" set threat="Win32.Ransom.Agent.A"
+  if "%filemd5%" == "9935873b88aec32f1f3bc8e067117c91" set threat="Win32.Ransom.Foreign.A"
 
   if "%threat%" == """" goto md5_safe
 
@@ -469,6 +476,10 @@ rem )
   if %errorlevel% == 0 set threat=MaliciousWebsite
   find /i /c "davilta.tk" %file% > NUL
   if %errorlevel% == 0 set threat=MaliciousWebsite
+  find /i /c "www.blogdanawa.co.kr" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32.Adware.CloverPlus!gen
+  find /i /c "Banyan Tree Technology Limited0" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32.Adware.Elex!gen
   find /i /c "This program was created as a fun little trick.  It is not meant to hurt anyone." %file% > NUL
   if %errorlevel% == 0 set threat=Win32.BadJoke.Agent.C!gen
 
