@@ -272,7 +272,9 @@ rem )
   set threat=""
 
   if "%filemd5%" == "44d88612fea8a8f36de82e1278abb02f" set threat=EicarTestFile
+  if "%filemd5%" == "1d283dd3ae2312eee624e8b8c46f6adb" set threat=Win32.Adware.Adload.A
   if "%filemd5%" == "2d89abac9d439abad1e427a467f0687d" set threat=Win32.Adware.BProtector.A
+  if "%filemd5%" == "898bdcc577a2b49e8eacaf18ddbb3e7b" set threat=Win32.Adware.BProtector.B
   if "%filemd5%" == "8f20a7f89173fe76c4de0c7e23a5bf67" set threat=Win32.Adware.CloverPlus.A
   if "%filemd5%" == "dd17f2d1bd0748ec84fb6ccd088ef829" set threat=Win32.Adware.CloverPlus.B
   if "%filemd5%" == "1c9bd7526e179792bc3bce0785a6c58d" set threat=Win32.Adware.Elex.A
@@ -282,9 +284,16 @@ rem )
   if "%filemd5%" == "8300c91b40229b42301aebc6d8859907" set threat=Win32.Adware.MultiPlug.C
   if "%filemd5%" == "297c46f413d3c5c5b46e335adf199c09" set threat=Win32.Adware.MultiPlug.D
   if "%filemd5%" == "e1d10cccd5dde588af8ee2cb7309523c" set threat=Win32.Adware.MultiPlug.E
+  if "%filemd5%" == "410bb7e2c88f92de31b83a173e173e2d" set threat=Win32.Adware.MultiPlug.F
+  if "%filemd5%" == "6223a19e77e3b9b4f633e8863ee1cf40" set threat=Win32.Adware.MultiPlug.G
+  if "%filemd5%" == "9afeb7fa65aa31c6b871237d14a8fb94" set threat=Win32.Adware.MultiPlug.H
+  if "%filemd5%" == "51869d78edfbeb04d0805522d9232518" set threat=Win32.Adware.MultiPlug.I
+  if "%filemd5%" == "b5e8219112f5de28e71487fd8c367b8f" set threat=Win32.Adware.MultiPlug.J
+  if "%filemd5%" == "2f21b030acc94619252a33d36dc2694c" set threat=Win32.Adware.MultiPlug.K
   if "%filemd5%" == "de3ea65a9f1064abdd9b612fd4b19aa1" set threat=Win32.Adware.PCPlus.A
   if "%filemd5%" == "edd19f0dbb38b1ed3b80d90102719c19" set threat=Win32.Adware.SpeedingUpMyPC.A
   if "%filemd5%" == "2e705785860f95358dc9aa6ed402198b" set threat=Win32.Adware.SProtector.A
+  if "%filemd5%" == "d59fb8a196cc8ad8e8bde0c437070cc6" set threat=Win32.Adware.SProtector.B
   if "%filemd5%" == "07b73a29b36215d3aa5a3ff353e69c90" set threat=Win32.BadJoke.Agent.A
   if "%filemd5%" == "9939f0f4547a1a7f8c42903ae490ba49" set threat=Win32.BadJoke.Agent.B
   if "%filemd5%" == "844db7862d6294ac569906e85e087e95" set threat=Win32.BadJoke.Agent.C
@@ -390,6 +399,9 @@ rem )
   echo MD5 Scan: Successful
   echo Behavior Scan: Pending
 
+  find /i /c "Comsight Security Essentials settings - DO NOT CHANGE THIS FILE" %file% > NUL
+  if %errorlevel% == 0 goto safe
+
   find /i /c "EICAR-STANDARD-ANTIVIRUS-TEST-FILE" %file% > NUL
   if %errorlevel% == 0 set threat=EicarTestFile
   find /i /c "git clone http" %file% > NUL
@@ -440,10 +452,16 @@ rem )
   if %errorlevel% == 0 set threat=MaliciousWebsite
   find /i /c "davilta.tk" %file% > NUL
   if %errorlevel% == 0 set threat=MaliciousWebsite
+  find /i /c "givmefilesnow.info" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32.Adware.Adload!gen
+  find /i /c "i1.forallwebestv.info" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32.Adware.Adload!gen
   find /i /c "www.blogdanawa.co.kr" %file% > NUL
   if %errorlevel% == 0 set threat=Win32.Adware.CloverPlus!gen
   find /i /c "Banyan Tree Technology Limited0" %file% > NUL
   if %errorlevel% == 0 set threat=Win32.Adware.Elex!gen
+  find /i /c "c:\temp\winnie-pooh\piglet-rules.tmp" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32.Adware.MultiPlug!gen
   find /i /c "This program was created as a fun little trick.  It is not meant to hurt anyone." %file% > NUL
   if %errorlevel% == 0 set threat=Win32.BadJoke.Agent.C!gen
   find /i /c "config.wallba.com" %file% > NUL
