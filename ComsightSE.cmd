@@ -280,7 +280,10 @@ rem )
   if "%filemd5%" == "05234975b085632d70d89c2f420c5107" set threat=Win32.Adware.MultiPlug.A
   if "%filemd5%" == "e9b27306a18f18b88945cdf066de2fc9" set threat=Win32.Adware.MultiPlug.B
   if "%filemd5%" == "8300c91b40229b42301aebc6d8859907" set threat=Win32.Adware.MultiPlug.C
+  if "%filemd5%" == "297c46f413d3c5c5b46e335adf199c09" set threat=Win32.Adware.MultiPlug.D
+  if "%filemd5%" == "e1d10cccd5dde588af8ee2cb7309523c" set threat=Win32.Adware.MultiPlug.E
   if "%filemd5%" == "de3ea65a9f1064abdd9b612fd4b19aa1" set threat=Win32.Adware.PCPlus.A
+  if "%filemd5%" == "edd19f0dbb38b1ed3b80d90102719c19" set threat=Win32.Adware.SpeedingUpMyPC.A
   if "%filemd5%" == "2e705785860f95358dc9aa6ed402198b" set threat=Win32.Adware.SProtector.A
   if "%filemd5%" == "07b73a29b36215d3aa5a3ff353e69c90" set threat=Win32.BadJoke.Agent.A
   if "%filemd5%" == "9939f0f4547a1a7f8c42903ae490ba49" set threat=Win32.BadJoke.Agent.B
