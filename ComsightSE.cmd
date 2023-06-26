@@ -2,6 +2,12 @@
 
 set csedir=%cd%
 set msgcount=0
+systeminfo | findstr /B /C:"OS Name" > os.cse
+find /i /c "Microsoft Windows 8" os.cse >NUL
+if %errorlevel% equ 0 (
+  set win8=1
+)
+del os.cse
 
 if not exist cse_config.txt (
   cls
@@ -305,6 +311,8 @@ rem )
       goto safe
     )
   )
+  if "%win8%" == 1 set filemd5=%filemd5: =%
+
   echo Comsight Security Essentials
   echo.
   echo Building a secure internet
@@ -323,15 +331,21 @@ rem )
   if "%filemd5%" == "8f20a7f89173fe76c4de0c7e23a5bf67" set threat="Win32.Adware.CloverPlus.A"
   if "%filemd5%" == "dd17f2d1bd0748ec84fb6ccd088ef829" set threat="Win32.Adware.CloverPlus.B"
   if "%filemd5%" == "1c9bd7526e179792bc3bce0785a6c58d" set threat="Win32.Adware.Elex.A"
+  if "%filemd5%" == "9aa537b86a28baa3b2cbcb214240cbb1" set threat="Win32.Adware.Elex.B"
+  if "%filemd5%" == "05234975b085632d70d89c2f420c5107" set threat="Win32.Adware.MultiPlug.A"
   if "%filemd5%" == "de3ea65a9f1064abdd9b612fd4b19aa1" set threat="Win32.Adware.PCPlus.A"
+  if "%filemd5%" == "2e705785860f95358dc9aa6ed402198b" set threat="Win32.Adware.SProtector.A"
   if "%filemd5%" == "07b73a29b36215d3aa5a3ff353e69c90" set threat="Win32.BadJoke.Agent.A"
   if "%filemd5%" == "9939f0f4547a1a7f8c42903ae490ba49" set threat="Win32.BadJoke.Agent.B"
   if "%filemd5%" == "844db7862d6294ac569906e85e087e95" set threat="Win32.BadJoke.Agent.C"
   if "%filemd5%" == "73c3466b6779344652ef97209ab4db1a" set threat="Win32.BadJoke.Anywork.A"
   if "%filemd5%" == "428b5352d8a6bb681ce65e172fe16c29" set threat="Win32.BadJoke.Jepruss.A"
   if "%filemd5%" == "5c99411fa8a11691771a476ff52a9344" set threat="Win32.Miner.Herxmin.A"
+  if "%filemd5%" == "7dee0193e01240d2c874eaf7e2fb9ee7" set threat="Win32.PUP.Kuping.A"
   if "%filemd5%" == "b5bde51e8f5c854b2c0ff7e13eb57859" set threat="Win32.Ransom.Agent.A"
+  if "%filemd5%" == "87175668b1c2aab93f454b179430d39e" set threat="Win32.Ransom.CryFile.A"
   if "%filemd5%" == "9935873b88aec32f1f3bc8e067117c91" set threat="Win32.Ransom.Foreign.A"
+  if "%filemd5%" == "9935873b88aec32f1f3bc8e067117c91" set threat="Win32.Trojan.Agent.A"
 
   if "%threat%" == """" goto md5_safe
 
@@ -482,6 +496,8 @@ rem )
   if %errorlevel% == 0 set threat=Win32.Adware.Elex!gen
   find /i /c "This program was created as a fun little trick.  It is not meant to hurt anyone." %file% > NUL
   if %errorlevel% == 0 set threat=Win32.BadJoke.Agent.C!gen
+  find /i /c "config.wallba.com" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32.PUP.Kuping!gen
 
   if "%threat%" == """" (
     if "%dirscan%" == "true" (
