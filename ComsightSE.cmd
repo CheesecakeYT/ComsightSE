@@ -333,6 +333,7 @@ rem )
   if "%filemd5%" == "1c9bd7526e179792bc3bce0785a6c58d" set threat="Win32.Adware.Elex.A"
   if "%filemd5%" == "9aa537b86a28baa3b2cbcb214240cbb1" set threat="Win32.Adware.Elex.B"
   if "%filemd5%" == "05234975b085632d70d89c2f420c5107" set threat="Win32.Adware.MultiPlug.A"
+  if "%filemd5%" == "e9b27306a18f18b88945cdf066de2fc9" set threat="Win32.Adware.MultiPlug.B"
   if "%filemd5%" == "de3ea65a9f1064abdd9b612fd4b19aa1" set threat="Win32.Adware.PCPlus.A"
   if "%filemd5%" == "2e705785860f95358dc9aa6ed402198b" set threat="Win32.Adware.SProtector.A"
   if "%filemd5%" == "07b73a29b36215d3aa5a3ff353e69c90" set threat="Win32.BadJoke.Agent.A"
