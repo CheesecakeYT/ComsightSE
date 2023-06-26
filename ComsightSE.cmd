@@ -48,24 +48,6 @@ if not exist cse_config.txt (
 rem if not exist cse_config.txt (
 rem   set /a msgcount=msgcount+1
 rem )
-  
-  tasklist > tasks.txt
-  find /i /c "TJprojMain.exe" %file% > NUL
-  if %errorlevel% == 0 (
-    set suspicioustask="TJprojMain.exe"
-    wmic process where "name='TJprojMain.exe'" get ExecutablePath > tasks.txt
-    for /f "tokens=1*delims=:" %%G in ('findstr /n "^" tasks.txt') do if %%G equ 1 set suspiciousfile=%%H
-    set suspicioustask=1
-  )
-  find /i /c "Synaptics.exe" %file% > NUL
-  if %errorlevel% == 0 (
-    set suspicioustask="Synaptics.exe"
-    wmic process where "name='Synaptics.exe'" get ExecutablePath > tasks.txt
-    for /f "tokens=1*delims=:" %%G in ('findstr /n "^" tasks.txt') do if %%G equ 1 set suspiciousfile=%%H
-    set suspicioustask=1
-  )
-  del tasks.txt
-  if "%suspicioustask%" == "1" goto suspicioustask
 
 :start
   cd %csedir%
@@ -102,44 +84,6 @@ rem )
   echo %choice% is not a valid choice.
   pause
   goto start
-  
-:suspicioustask
-  cls
-  color cf
-  title Your action is required - Comsight Security Essentials
-  echo Comsight Security Essentials
-  echo.
-  echo Building a secure internet
-  echo.
-  echo
-  echo A file was found hosting a suspicious task.
-  echo.
-  echo.
-  echo Task: %suspicioustask%
-  echo.
-  echo Hosting file: %suspiciousfile%
-  echo.
-  echo.
-  echo Do you want to scan the hosting file for malware?
-  echo.
-  echo (YES) - scan the file
-  echo (NO) - don't scan the file
-  echo.
-  set /p choice="Enter your choice: "
-  if /i "%choice%" == "yes" (
-    set file=%suspiciousfile%
-    goto md5
-  )
-  if /i "%choice%" == "no" (
-    echo.
-    echo The file won't be scanned.
-    pause
-    goto start
-  )
-  echo.
-  echo %choice% is not a valid choice.
-  pause
-  goto suspicioustask
   
 :messages
   cls
