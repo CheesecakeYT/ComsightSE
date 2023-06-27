@@ -290,6 +290,15 @@ rem )
   if "%filemd5%" == "51869d78edfbeb04d0805522d9232518" set threat=Win32.Adware.MultiPlug.I
   if "%filemd5%" == "b5e8219112f5de28e71487fd8c367b8f" set threat=Win32.Adware.MultiPlug.J
   if "%filemd5%" == "2f21b030acc94619252a33d36dc2694c" set threat=Win32.Adware.MultiPlug.K
+  if "%filemd5%" == "83528348154f9f3f3c332191b0849b25" set threat=Win32.Adware.MultiPlug.L
+  if "%filemd5%" == "06cfeaa6556d9264ef303884935ddfe2" set threat=Win32.Adware.MultiPlug.M
+  if "%filemd5%" == "e1d330228db3f4aab5582d1a294163f3" set threat=Win32.Adware.MultiPlug.N
+  if "%filemd5%" == "5a525639bc99f2961bf96f39a08b3f59" set threat=Win32.Adware.MultiPlug.O
+  if "%filemd5%" == "0231aebb8155fd069d17eab6a679cc1e" set threat=Win32.Adware.MultiPlug.P!susp
+  if "%filemd5%" == "ffe3f0c62f2fede9890b18d73724fd97" set threat=Win32.Adware.MultiPlug.Q
+  if "%filemd5%" == "9c354249e2b00af7362d8eecaee9b2b2" set threat=Win32.Adware.MultiPlug.R
+  if "%filemd5%" == "dfbbc852264301fc93cf20521025dbda" set threat=Win32.Adware.MultiPlug.S
+  if "%filemd5%" == "294725ae35ecfb4f5e0d29239213c2c7" set threat=Win32.Adware.MultiPlug.T
   if "%filemd5%" == "de3ea65a9f1064abdd9b612fd4b19aa1" set threat=Win32.Adware.PCPlus.A
   if "%filemd5%" == "edd19f0dbb38b1ed3b80d90102719c19" set threat=Win32.Adware.SpeedingUpMyPC.A
   if "%filemd5%" == "2e705785860f95358dc9aa6ed402198b" set threat=Win32.Adware.SProtector.A
@@ -305,6 +314,8 @@ rem )
   if "%filemd5%" == "87175668b1c2aab93f454b179430d39e" set threat=Win32.Ransom.CryFile.A
   if "%filemd5%" == "9935873b88aec32f1f3bc8e067117c91" set threat=Win32.Ransom.Foreign.A
   if "%filemd5%" == "9935873b88aec32f1f3bc8e067117c91" set threat=Win32.Trojan.Agent.A
+  if "%filemd5%" == "5f5e677b2ec9defb4f0b884766c370c7" set threat=Win32.Trojan.Agent.B
+  if "%filemd5%" == "8407a5532739eab584ab33cd6c6cac62" set threat=Win32.Trojan.Injuke.A!susp
 
   if "%threat%" == """" goto md5_safe
 
