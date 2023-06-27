@@ -316,6 +316,7 @@ rem )
   if "%filemd5%" == "9935873b88aec32f1f3bc8e067117c91" set threat=Win32.Trojan.Agent.A
   if "%filemd5%" == "5f5e677b2ec9defb4f0b884766c370c7" set threat=Win32.Trojan.Agent.B
   if "%filemd5%" == "8407a5532739eab584ab33cd6c6cac62" set threat=Win32.Trojan.Injuke.A!susp
+  if "%filemd5%" == "b6dd6af9705333f8108fff280fa4760f" set threat=Win32.Trojan.Olock.A
 
   if "%threat%" == """" goto md5_safe
 
