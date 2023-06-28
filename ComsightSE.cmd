@@ -272,6 +272,7 @@ rem )
   set threat=""
 
   if "%filemd5%" == "44d88612fea8a8f36de82e1278abb02f" set threat=EicarTestFile
+  if "%filemd5%" == "8251b13b7516ca408630c8bdf74e45ca" set threat=OSX.Trojan.JokerSpy.A
   if "%filemd5%" == "1d283dd3ae2312eee624e8b8c46f6adb" set threat=Win32.Adware.Adload.A
   if "%filemd5%" == "2d89abac9d439abad1e427a467f0687d" set threat=Win32.Adware.BProtector.A
   if "%filemd5%" == "898bdcc577a2b49e8eacaf18ddbb3e7b" set threat=Win32.Adware.BProtector.B
