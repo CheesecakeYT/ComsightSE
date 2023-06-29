@@ -271,6 +271,7 @@ rem )
 
   set threat=""
 
+  if "%filemd5%" == "dcf060e00547cfe641eff3f836ec08c8" set threat=BAT.Ransom.Mallox.A
   if "%filemd5%" == "44d88612fea8a8f36de82e1278abb02f" set threat=EicarTestFile
   if "%filemd5%" == "8251b13b7516ca408630c8bdf74e45ca" set threat=OSX.Trojan.JokerSpy.A
   if "%filemd5%" == "1d283dd3ae2312eee624e8b8c46f6adb" set threat=Win32.Adware.Adload.A
