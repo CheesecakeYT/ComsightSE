@@ -375,8 +375,10 @@ rem )
   if "%filemd5%" == "0b8d8ecaded2508690b6a52d9eb61ccd" set threat=Win32.Adware.Techsnab.A
   if "%filemd5%" == "017a762469f1e0f811bb7da274b8a99c" set threat=Win32.Adware.TopTools.A
   if "%filemd5%" == "d9ea10b4401b6e448bf1e64a5be677dd" set threat=Win32.Adware.TrafficMouse.A
+  if "%filemd5%" == "4c926c4b6f4b3226752e4b2d75448a65" set threat=Win32.Adware.TrafficMouse.B
   if "%filemd5%" == "fc75a8c64abb4c907441059d5165c8cf" set threat=Win32.Adware.Vosteran.A
   if "%filemd5%" == "fd5eb09872c9736b16b199d78a2487eb" set threat=Win32.Adware.Weiduan.A
+  if "%filemd5%" == "8d3fe7e5e5389af219557f0c0db1a074" set threat=Win32.Adware.Zdengo.A
   if "%filemd5%" == "07b73a29b36215d3aa5a3ff353e69c90" set threat=Win32.BadJoke.Agent.A
   if "%filemd5%" == "9939f0f4547a1a7f8c42903ae490ba49" set threat=Win32.BadJoke.Agent.B
   if "%filemd5%" == "844db7862d6294ac569906e85e087e95" set threat=Win32.BadJoke.Agent.C
@@ -466,6 +468,7 @@ rem )
   if "%filemd5%" == "3ed4adb65428f2c8ab75e60c3cebc9fa" set threat=Win64.Miner.Agent.K
   if "%filemd5%" == "fd94d0c40e2eabe62ad73c60d0bdc340" set threat=Win64.Miner.Agent.L
   if "%filemd5%" == "5d8dbf60120617dd57f4ee851cd32fb6" set threat=Win64.Miner.Agent.M
+  if "%filemd5%" == "6c8fc5cf8021bede03abad71a80de913" set threat=Win64.Miner.Agent.N
 
   if "%threat%" == """" goto md5_safe
 
