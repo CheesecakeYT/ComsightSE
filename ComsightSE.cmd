@@ -374,6 +374,7 @@ rem )
   if "%filemd5%" == "d59fb8a196cc8ad8e8bde0c437070cc6" set threat=Win32.Adware.SProtector.B
   if "%filemd5%" == "0b8d8ecaded2508690b6a52d9eb61ccd" set threat=Win32.Adware.Techsnab.A
   if "%filemd5%" == "017a762469f1e0f811bb7da274b8a99c" set threat=Win32.Adware.TopTools.A
+  if "%filemd5%" == "d9ea10b4401b6e448bf1e64a5be677dd" set threat=Win32.Adware.TrafficMouse.A
   if "%filemd5%" == "fc75a8c64abb4c907441059d5165c8cf" set threat=Win32.Adware.Vosteran.A
   if "%filemd5%" == "fd5eb09872c9736b16b199d78a2487eb" set threat=Win32.Adware.Weiduan.A
   if "%filemd5%" == "07b73a29b36215d3aa5a3ff353e69c90" set threat=Win32.BadJoke.Agent.A
@@ -390,6 +391,7 @@ rem )
   if "%filemd5%" == "2fd3b2b417b2d4535eb46f82a8291833" set threat=Win32.Miner.Agent.D
   if "%filemd5%" == "30cf385e056bb8075366eaaeb1628d6d" set threat=Win32.Miner.Agent.E
   if "%filemd5%" == "31a665444e867ad49999baf955e4a184" set threat=Win32.Miner.Agent.F
+  if "%filemd5%" == "4447fded02577a07538f724fa962b686" set threat=Win32.Miner.Agent.G
   if "%filemd5%" == "5c99411fa8a11691771a476ff52a9344" set threat=Win32.Miner.Herxmin.A
   if "%filemd5%" == "b5bde51e8f5c854b2c0ff7e13eb57859" set threat=Win32.Ransom.Agent.A
   if "%filemd5%" == "808d8409376a125a75f2f6efc6a93432" set threat=Win32.Ransom.Cerber.A
@@ -411,7 +413,9 @@ rem )
   if "%filemd5%" == "f897f1a171248ff8a05860019e42c49c" set threat=Win32.Trojan.Agent.K
   if "%filemd5%" == "f72d006df3db1f6a6b3bf796774fd51e" set threat=Win32.Trojan.Agent.L
   if "%filemd5%" == "705f65e733bb6f6e5a39e9622ee62a86" set threat=Win32.Trojan.Agent.M
+  if "%filemd5%" == "5183294258534f9e372fe08d92870993" set threat=Win32.Trojan.Agent.N
   if "%filemd5%" == "cbc15ca34a62d409b99726b6a2c47a93" set threat=Win32.Trojan.Androm.A
+  if "%filemd5%" == "462a2522d2d2fe095e92fe50a663aea5" set threat=Win32.Trojan.Androm.B
   if "%filemd5%" == "25a5f0a8a5822a4dfe57a74316a1b20a" set threat=Win32.Trojan.AutoIT.A
   if "%filemd5%" == "2b788a143ca4e5b7234400cf3a914565" set threat=Win32.Trojan.AutoIT.B
   if "%filemd5%" == "fb9529e54e1b1bb55666d5df8aeb888a" set threat=Win32.Trojan.AutoIT.C
@@ -444,6 +448,7 @@ rem )
   if "%filemd5%" == "3c2db9614dbd46b16abd206cacaee7b6" set threat=Win32.Trojan.Suloc.A
   if "%filemd5%" == "142d235670245f630baa5a52bc6b75bf" set threat=Win32.Trojan.Tasker.A
   if "%filemd5%" == "3b1745f3459091b21ffe076fef776445" set threat=Win32.Trojan.Wonknod.A
+  if "%filemd5%" == "66028d66816c154aceeca3e01d1f0532" set threat=Win32.Trojan.Wonknod.B
   if "%filemd5%" == "f697cf8052041e9899a14b0834de3223" set threat=Win32.Trojan.Yakes.A
   if "%filemd5%" == "632e6b472f03f7c3923d44475a43f1e8" set threat=Win32.Trojan.Yakes.B
   if "%filemd5%" == "306330092e4c3068f4cf816434df0e27" set threat=Win32.Virus.Jeefo.A
@@ -460,6 +465,7 @@ rem )
   if "%filemd5%" == "38d0734066882956ac3bb538f8836135" set threat=Win64.Miner.Agent.J
   if "%filemd5%" == "3ed4adb65428f2c8ab75e60c3cebc9fa" set threat=Win64.Miner.Agent.K
   if "%filemd5%" == "fd94d0c40e2eabe62ad73c60d0bdc340" set threat=Win64.Miner.Agent.L
+  if "%filemd5%" == "5d8dbf60120617dd57f4ee851cd32fb6" set threat=Win64.Miner.Agent.M
 
   if "%threat%" == """" goto md5_safe
 
