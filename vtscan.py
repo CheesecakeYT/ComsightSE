@@ -28,6 +28,6 @@ detections = response_json['data'][0]['attributes']['last_analysis_stats']['mali
 output_file = 'output.txt'  # Replace with the path to the output text file
 
 with open(output_file, 'w') as f:
-    f.write(f'Malware detections for {file_to_scan}: {detections}\n')
+    f.write(f'Malware detections for {scannedfile}: {detections}\n')
 
 print(f'Scan completed. Results saved to: {output_file}')
